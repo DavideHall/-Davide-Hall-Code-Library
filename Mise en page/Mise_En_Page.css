@@ -1,0 +1,107 @@
+
+body
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, minmax(50px, auto));
+  grid-template-areas:  "logo"
+                        "menu"
+                        "breadcrumb"
+                        "main"
+                        "sidebar"
+                        "footer";
+}
+
+.box
+{
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  margin:auto;
+}
+
+.logo
+{
+  grid-area: logo;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+
+}
+
+.menu
+{
+  grid-area: menu;
+}
+
+.main
+{
+  margin-top: auto;
+  margin-right: auto;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 100px;
+}
+
+.sidebar
+{
+  position: absolute;
+  top: 140px;
+  right: 10px;
+  bottom: 0;
+  margin-top: auto;
+  margin-right: auto;
+  grid-area: sidebar;
+  width: 300px;
+  background-color: #000
+
+}
+
+.footer
+{
+  grid-area: footer;
+  
+
+}
+
+@media screen and (min-width: 768px)
+{
+  body
+  {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(100px, auto));
+    grid-template-areas:  "logo menu menu menu menu menu"
+                          "breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb"
+                          "main main main main sidebar sidebar"
+                          "footer footer footer footer footer footer";
+  }
+}
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  margin-top: auto
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #F026E7;
+  color: black;
+}
